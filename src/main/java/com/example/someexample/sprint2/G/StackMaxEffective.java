@@ -1,4 +1,4 @@
-package com.example.someexample.sprint2.G.F;
+package com.example.someexample.sprint2.G;
 
 import java.io.BufferedReader;
 import java.io.IOException;
