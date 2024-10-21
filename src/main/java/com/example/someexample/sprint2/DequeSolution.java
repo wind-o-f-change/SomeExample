@@ -5,27 +5,29 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // Задача https://contest.yandex.ru/contest/22781/problems/A/?success=121936529#3484683/2020_05_25/sXAjV3Ufy3
-// Проверка https://contest.yandex.ru/contest/22781/run-report/121936529/
+// Проверка https://contest.yandex.ru/contest/22781/run-report/121949322/
 
-public class Solution {
+public class DequeSolution {
+
   public static void main(String[] args) throws IOException {
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    int n = Integer.parseInt(br.readLine());
-    int m = Integer.parseInt(br.readLine());
-    Deque deque = new Deque(m);
+    try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+      int n = Integer.parseInt(br.readLine());
+      int m = Integer.parseInt(br.readLine());
+      Deque deque = new Deque(m);
 
-    for (int i = 0; i < n; i++) {
-      String command = br.readLine();
-      if (command.startsWith("push_back")) {
-        int value = Integer.parseInt(command.split(" ")[1]);
-        deque.pushBack(value);
-      } else if (command.startsWith("push_front")) {
-        int value = Integer.parseInt(command.split(" ")[1]);
-        deque.pushFront(value);
-      } else if (command.equals("pop_front")) {
-        deque.popFront();
-      } else if (command.equals("pop_back")) {
-        deque.popBack();
+      for (int i = 0; i < n; i++) {
+        String command = br.readLine();
+        if (command.startsWith("push_back")) {
+          int value = Integer.parseInt(command.split(" ")[1]);
+          deque.pushBack(value);
+        } else if (command.startsWith("push_front")) {
+          int value = Integer.parseInt(command.split(" ")[1]);
+          deque.pushFront(value);
+        } else if (command.equals("pop_front")) {
+          deque.popFront();
+        } else if (command.equals("pop_back")) {
+          deque.popBack();
+        }
       }
     }
   }
