@@ -34,4 +34,16 @@ public class TwoBycicles {
     }
     return searchDay(toSearch, amounts, ++mid, end);
   }
+
+  /*private static int searchDay(int toSearch, int[] amounts, int start, int end) {
+    while (start < end) {
+      int mid = (start + end) / 2;
+      if (amounts[mid] >= toSearch) {
+        end = mid; // Ищем дальше влево, чтобы найти первое вхождение
+      } else {
+        start = mid + 1;
+      }
+    }
+    return start < amounts.length && amounts[start] >= toSearch ? start + 1 : -1; // Возвращаем индекс для пользователя (с 1)
+  }*/
 }
