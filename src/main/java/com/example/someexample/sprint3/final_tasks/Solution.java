@@ -54,6 +54,6 @@ public class Solution {
   private static void test() {
     int[] arr = {19, 21, 100, 101, 1, 4, 5, 7, 12};
     int foundIdx = brokenSearch(arr, 5);
-    System.out.println("found idx=" + foundIdx + "; request is " + (6 == foundIdx));
+    System.out.println("found idx=" + foundIdx + "; responce is " + (6 == foundIdx));
   }
 }
