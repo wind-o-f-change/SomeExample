@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// https://contest.yandex.ru/contest/24809/problems/I/
 public class CountBST {
 
   public static void main(String[] args) throws IOException {
@@ -15,7 +16,7 @@ public class CountBST {
     int[] arr = new int[nodesCnt + 1];
     arr[0] = 1;
     arr[1] = 1;
-    
+
     for (int currCnt = 2; currCnt <= nodesCnt; currCnt++) {
       int summ = 0;
 

@@ -34,17 +34,20 @@ public class Solution {
 
     heapSort(participants);
 
-    Stream.of(participants).map(p -> p.login).reduce((x, y) -> x + "\n" + y)
-            .ifPresent(System.out::println);
+    Stream.of(participants)
+        .map(p -> p.login)
+        .reduce((x, y) -> x + "\n" + y)
+        .ifPresent(System.out::println);
   }
 
-  private static Participant[] getParticipants() throws IOException{
+  private static Participant[] getParticipants() throws IOException {
     try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-        return br.lines().limit(parseInt(br.readLine()))
-                .map(Participant::new).toArray(Participant[]::new);
+      return br.lines()
+          .limit(parseInt(br.readLine()))
+          .map(Participant::new)
+          .toArray(Participant[]::new);
     }
   }
-
 
   static void heapSort(Participant[] participants) {
     int n = participants.length;

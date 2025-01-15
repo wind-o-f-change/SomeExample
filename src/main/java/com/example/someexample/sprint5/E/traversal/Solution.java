@@ -44,17 +44,6 @@ public class Solution {
     return true;
   }
 
-  // Определение структуры узла дерева
-  static class Node {
-    int value;
-    Node left;
-    Node right;
-
-    Node(int value) {
-      this.value = value;
-    }
-  }
-
   // Пример использования
   public static void main(String[] args) {
     Node root = new Node(2);
@@ -70,5 +59,16 @@ public class Solution {
     invalidRoot.right.right = new Node(6);
 
     System.out.println(treeSolution(invalidRoot)); // false
+  }
+
+  // Определение структуры узла дерева
+  static class Node {
+    int value;
+    Node left;
+    Node right;
+
+    Node(int value) {
+      this.value = value;
+    }
   }
 }

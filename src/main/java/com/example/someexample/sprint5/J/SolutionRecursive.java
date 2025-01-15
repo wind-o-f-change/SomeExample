@@ -1,8 +1,9 @@
 package com.example.someexample.sprint5.J;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
-public class SolutionRecursive{
+public class SolutionRecursive {
   public static Node insert(Node root, int key) {
     // “ヽ(´▽｀)ノ”
     addNode(root, key);
@@ -26,6 +27,21 @@ public class SolutionRecursive{
     }
   }
 
+  public static void main(String[] args) {
+    test();
+  }
+
+  // <template>
+
+  private static void test() {
+    Node node1 = new Node(null, null, 7);
+    Node node2 = new Node(node1, null, 8);
+    Node node3 = new Node(null, node2, 7);
+    Node newHead = insert(node3, 6);
+    assertSame(newHead, node3);
+    assertEquals(6, newHead.getLeft().getValue());
+  }
+
   // <template>
   private static class Node {
     private int value;
@@ -40,6 +56,10 @@ public class SolutionRecursive{
 
     public int getValue() {
       return value;
+    }
+
+    public void setValue(int value) {
+      this.value = value;
     }
 
     public Node getRight() {
@@ -57,24 +77,5 @@ public class SolutionRecursive{
     public void setLeft(Node left) {
       this.left = left;
     }
-
-    public void setValue(int value) {
-      this.value = value;
-    }
-  }
-
-  // <template>
-
-
-  public static void main(String[] args){
-    test();
-  }
-  private static void test() {
-    Node node1 = new Node(null, null, 7);
-    Node node2 = new Node(node1, null, 8);
-    Node node3 = new Node(null, node2, 7);
-    Node newHead = insert(node3, 6);
-    assertTrue(newHead == node3);
-    assertTrue(newHead.getLeft().getValue() == 6);
   }
 }

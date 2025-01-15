@@ -63,6 +63,12 @@ class Node {
 
   @Override
   public String toString() {
-    return "Node[val=" + val + ", left=" + (left == null ? "null" : left.val) + ", right=" + (right == null ? "null" : right.val) + ']';
+    return "Node[val="
+        + val
+        + ", left="
+        + (left == null ? "null" : left.val)
+        + ", right="
+        + (right == null ? "null" : right.val)
+        + ']';
   }
 }

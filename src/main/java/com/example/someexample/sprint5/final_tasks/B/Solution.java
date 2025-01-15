@@ -18,6 +18,10 @@ class Node {
     return value;
   }
 
+  public void setValue(int value) {
+    this.value = value;
+  }
+
   public Node getRight() {
     return right;
   }
@@ -32,10 +36,6 @@ class Node {
 
   public void setLeft(Node left) {
     this.left = left;
-  }
-
-  public void setValue(int value) {
-    this.value = value;
   }
 }
 
@@ -75,7 +75,6 @@ public class Solution {
     }
     return node;
   }
-
 
   public static void main(String[] args) {
     test();
